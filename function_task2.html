@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>areArraysSame</title>
+</head>
+<body>
+<h1>areArraysSame</h1>
+
+<script>
+	
+var masive = [];
+var xmasive = [];
+	function areArraysSame(masive, xmasive){
+		if (masive.length!==xmasive.length){
+			 	return "false";
+			 }
+		for (var i=0; i<xmasive.length && i<masive.length; i++){
+			 
+			 if (masive[i]!==xmasive[i]){
+				return "false";
+			} 
+				
+			} return "true";
+	}
+areArraysSame([1, 2, 3], [1, 2, 4, 5])
+
+</script>
+</body>
+</html>
