@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first proper HTML page</title>
+</head>
+<body>
+<h1 id="heading">Hello world!</h1>
+
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+<script>
+	
+var h1text = function(){
+	$("h1").text("My friends")
+	$("h1").fadeTo(2000, 0.1).fadeTo(1000, 1)
+}
+	setTimeout(h1text, 1000)
+	
+var counter =1;
+function printMessage(){
+	console.log("You have been starting at your console for " + counter + " seconds");
+		counter+=5
+}
+var intervalId = setInterval(printMessage, 5000);
+
+	clearInterval(intervalId)
+
+
+</script>
+</body>
+</html>

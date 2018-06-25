@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive programming</title>
+</head>
+<body>
+<h1 id="heading">Hello world!</h1>
+
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+<script>
+	
+var position = 0
+var direction = 'right'
+$("#heading").offset({left:position, top:position})
+function moveHeading(){
+	if (direction==='right'){
+		$("#heading").offset({left:position});
+	position++;
+	if (position>200){
+		position=0;
+		direction='down'
+	}
+	}else if (direction ==='down'){
+		$("#heading").offset({top:position});
+		position++;
+		if (position>200){
+			position=200
+			direction='left'
+		}
+	}else if (direction === 'left'){
+		$("#heading").offset({left:position});
+		position--;
+		if (position<0){
+			position=200
+			direction='up'
+		}
+	}else if (direction === 'up'){
+		$("#heading").offset({top:position});
+		position--;
+		if (position<0){
+			position=0
+			direction='right'
+		}	
+	};
+}
+
+
+setInterval(moveHeading, 20)
+
+
+
+</script>
+</body>
+</html>
