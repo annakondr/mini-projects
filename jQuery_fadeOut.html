@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first proper HTML page</title>
+</head>
+<body>
+<h1 id="heading">Hello world!</h1>
+
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+<script>
+	
+
+	$("h1").text("My friends")
+	
+		$("h1").fadeTo(2000, 0.1).fadeTo(1000, 1)
+	
+
+var friends= ["Alexandra", "Olga", "Petya", "Valera", "Max", "Natali"]
+for (y=0; y<friends.length; y++){
+	$("body").append("<p>"+friends[y]+"</p>")
+}
+$("p").hide(1000).delay(2000).fadeIn(1000)
+
+$("p").append(" is a good friend!")
+
+	
+
+
+</script>
+</body>
+</html>

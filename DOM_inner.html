@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first proper HTML page</title>
+</head>
+<body>
+<h1 id="heading">Prompt method</h1>
+
+<script>
+	var headingEl = document.getElementById ("heading");
+	console.log(headingEl.innerHTML)
+	var newHeadingEl = prompt("Please provide a new heading:");
+	headingEl.innerHTML = newHeadingEl
+	
+
+
+</script>
+</body>
+</html>

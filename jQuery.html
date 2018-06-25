@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first proper HTML page</title>
+</head>
+<body>
+<h1 id="heading">Prompt method</h1>
+
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+<script>
+	
+	var newHeadingEl = prompt("Please provide a new heading:");
+	$("#heading").text(newHeadingEl);
+	
+$("body").append("<p>Tis is a new paragraph</p>");
+
+for (var i = 0; i<3; i++){
+	var hobby = prompt("Tell me one of your hobbies!");
+	$("body").append("<p>" + hobby + "</p>");
+}
+
+</script>
+</body>
+</html>
