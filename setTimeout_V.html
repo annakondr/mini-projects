@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timeout</title>
+</head>
+<body>
+<h1 id="heading">SetTimeout</h1>
+
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+<script>
+	var i = 1;
+setTimeout(function run() {
+  console.log(i);
+  i++
+  setTimeout(run, 1000);
+  
+}, 1000);
+
+
+
+</script>
+</body>
+</html>
