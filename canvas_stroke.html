@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+</head>
+<body>
+
+<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.strokeStyle="DeepPink";
+ctx.lineWidth=5;
+ctx.strokeRect(150, 150, 55, 40)
+
+ctx.strokeStyle="Turquoise";
+ctx.lineWidth = 3;
+ctx.beginPath();
+ctx.moveTo(154, 154);
+ctx.lineTo(200, 186)
+ctx.moveTo(200, 154);
+ctx.lineTo(154, 186);
+ctx.stroke()
+
+ctx.beginPath();
+ctx.arc(265, 135, 15, 0, Math.PI*2, false)
+ctx.stroke()
+ctx.beginPath();
+ctx.moveTo(265, 150);
+ctx.lineTo(265, 210)
+ctx.moveTo(265, 210);
+ctx.lineTo(225, 300)
+ctx.moveTo(265, 210);
+ctx.lineTo(305, 300);
+ctx.moveTo(265, 160);
+ctx.lineTo(206, 180)
+ctx.moveTo(265, 160);
+ctx.lineTo(305, 110)
+ctx.stroke()
+
+ctx.fillStyle="SkyBlue";
+ctx.beginPath();
+ctx.moveTo(350, 230);
+ctx.lineTo(310, 270);
+ctx.lineTo(310, 310);
+ctx.lineTo(390, 310);
+ctx.lineTo(390, 270);
+ctx.lineTo(350, 230);
+ctx.fill()
+
+function circle(x, y, radius){
+	ctx.beginPath();
+	ctx.arc(x, y, radius, 0, Math.PI*1, true);
+	ctx.stroke();
+};
+ctx.lineWidth=7
+ctx.strokeStyle="Red";
+circle(200, 200, 200);
+ctx.strokeStyle="Orange";
+circle(200, 200, 190);
+ctx.strokeStyle="Yellow";
+circle(200, 200, 180);
+ctx.strokeStyle="Green";
+circle(200, 200, 170);
+ctx.strokeStyle="Blue";
+circle(200, 200, 160);
+ctx.strokeStyle="Purple";
+circle(200, 200, 150);
+
+
+
+
+</script>
+</body>
+</html>
